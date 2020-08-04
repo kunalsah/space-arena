@@ -1,12 +1,6 @@
 # space-arena
-    
- 
- 
- 
- 
- 
- 
- 
+# download your .gif yourself for the game as mentioned in the line number 42
+# also download your sound as mentioned in the above code for the game
 import turtle
 import math
 import random
@@ -14,28 +8,26 @@ import time
 import os
 import platform
  
-#if on windows, import winsound or, better yet, switch to linux
-#if paltform.system()=="Windows":
-    #try:
-        #import winsound
-    #except:
-        #print("Winsound module not available.")
+if on windows, import winsound or, better yet, switch to linux
+if paltform.system()=="Windows":
+    try:
+        import winsound
+    except:
+        print("Winsound module not available.")
  
-    #def play_sound(sound_file,time=0):
-        #windows
-        #if platform.system()=="Windows":
-            #winsound.Playsound(sound_file,winsound.SND_ASYNC)
-        #linux
-        #elif platform.system() == "Linux":
-            #os.system("aplay -q {}&".format(sound_file))
-        #mac
-        #else:
-            #os.system("afplay {}&".format(sound_file))
+    def play_sound(sound_file,time=0):
+        windows
+        if platform.system()=="Windows":
+            winsound.Playsound(sound_file,winsound.SND_ASYNC)
+        linux
+        elif platform.system() == "Linux":
+            os.system("aplay -q {}&".format(sound_file))
+        mac
+        else:
+            os.system("afplay {}&".format(sound_file))
  
-        #if time > 0:
-            #turtle.ontimer(lambda: play_sound(sound_file,time), t=int(time * 1000))
- 
- 
+        if time > 0:
+            turtle.ontimer(lambda: play_sound(sound_file,time), t=int(time * 1000))
  
 SCREEN_WIDTH=800
 SCREEN_HEIGHT=600
@@ -45,8 +37,8 @@ wn.setup(width = SCREEN_WIDTH + 220, height = SCREEN_HEIGHT + 20)
 wn.title("Space Arena by kunal sah")
 wn.bgcolor("black")
  
-#start the BGM
-#play_sound("insert your sound,120")
+start the BGM
+play_sound("insert your sound,120")
  
 images=["hunter.gif","surveillance.gif","mine.gif","powerup.gif"]
 for image in images:
